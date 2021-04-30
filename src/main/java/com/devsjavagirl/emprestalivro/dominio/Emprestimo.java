@@ -1,6 +1,7 @@
 package com.devsjavagirl.emprestalivro.dominio;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 public class Emprestimo {
@@ -10,10 +11,32 @@ public class Emprestimo {
     private Long codigo;
 
     @ManyToOne
+    @JoinColumn(name = "codigoUsuario")
     private Usuario usuario;
 
     @ManyToOne
+    @JoinColumn(name = "codigoLivro")
     private Livro livro;
+
+    private LocalDate dataEmprestimo;
+
+    private LocalDate dataDevolucao;
+
+    public LocalDate getDataEmprestimo() {
+        return dataEmprestimo;
+    }
+
+    public void setDataEmprestimo(LocalDate dataEmprestimo) {
+        this.dataEmprestimo = dataEmprestimo;
+    }
+
+    public LocalDate getDataDevolucao() {
+        return dataDevolucao;
+    }
+
+    public void setDataDevolucao(LocalDate dataDevolucao) {
+        this.dataDevolucao = dataDevolucao;
+    }
 
     public Long getCodigo() {
         return codigo;

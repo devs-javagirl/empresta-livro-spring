@@ -9,18 +9,18 @@ public class Livro {
 
     @Id
     @GeneratedValue
-    private Long codigo;
+    private Long codigoLivro;
 
     private String nome;
 
     private String autor;
 
-    public Long getCodigo() {
-        return codigo;
+    public Long getCodigoLivro() {
+        return codigoLivro;
     }
 
-    public void setCodigo(Long codigo) {
-        this.codigo = codigo;
+    public void setCodigoLivro(Long codigoLivro) {
+        this.codigoLivro = codigoLivro;
     }
 
     public String getNome() {
@@ -42,7 +42,7 @@ public class Livro {
     @Override
     public String toString() {
         return "Livro{" +
-                "codigo=" + codigo +
+                "codigo=" + codigoLivro +
                 ", nome='" + nome + '\'' +
                 ", autor='" + autor + '\'' +
                 '}';

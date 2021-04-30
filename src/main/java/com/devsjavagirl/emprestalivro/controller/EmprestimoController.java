@@ -13,7 +13,7 @@ public class EmprestimoController {
     @Autowired
     private EmprestimoService emprestimoService;
 
-    @PostMapping("/emprestimo")
+    @PostMapping(value = "/emprestimo", consumes = "application/json")
     public void save(@RequestBody Emprestimo emprestimo){
         emprestimoService.save(emprestimo);
     }

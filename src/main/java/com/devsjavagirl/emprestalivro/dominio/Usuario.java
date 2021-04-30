@@ -9,7 +9,7 @@ public class Usuario {
 
     @Id
     @GeneratedValue
-    private Long codigo;
+    private Long codigoUsuario;
 
     private String nomeCompleto;
 
@@ -17,12 +17,12 @@ public class Usuario {
 
     private String endereco;
 
-    public Long getCodigo() {
-        return codigo;
+    public Long getCodigoUsuario() {
+        return codigoUsuario;
     }
 
-    public void setCodigo(Long codigo) {
-        this.codigo = codigo;
+    public void setCodigoUsuario(Long codigoUsuario) {
+        this.codigoUsuario = codigoUsuario;
     }
 
     public String getNomeCompleto() {
@@ -52,7 +52,7 @@ public class Usuario {
     @Override
     public String toString() {
         return "Usuario{" +
-                "codigo=" + codigo +
+                "codigo=" + codigoUsuario +
                 ", nomeCompleto='" + nomeCompleto + '\'' +
                 ", dataNascimento='" + dataNascimento + '\'' +
                 ", endereco='" + endereco + '\'' +
